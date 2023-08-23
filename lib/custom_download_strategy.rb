@@ -105,6 +105,10 @@ class GitHubPrivateRepositoryReleaseDownloadStrategy < GitHubPrivateRepositoryDo
     release_url = "https://api.github.com/repos/#{@owner}/#{@repo}/releases/tags/#{@tag}"
     GitHub.open_api(release_url)
   end
+
+  def resolve_url_basename_time_file_size(url, timeout: nil)
+    [download_url, "", Time.now, 0, false]
+  end
 end
 
 class DownloadStrategyDetector
