@@ -1,4 +1,4 @@
-require_relative "../custom_download_strategy.rb"
+require_relative "lib/private"
 
 class TickCli < Formula
   version "0.1.2"
