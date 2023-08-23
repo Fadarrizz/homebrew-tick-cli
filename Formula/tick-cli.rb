@@ -9,6 +9,6 @@ class TickCli < Formula
   head "https://github.com/Fadarrizz/tick-cli.git"
 
   def install
-    bin.install "tc"
+    bin.install "tick-cli"
   end
 end
