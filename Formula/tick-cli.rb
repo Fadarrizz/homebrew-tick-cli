@@ -1,4 +1,3 @@
-require "formula"
 require_relative "../custom_download_strategy.rb"
 
 class TickCli < Formula
