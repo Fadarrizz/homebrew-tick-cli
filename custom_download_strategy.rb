@@ -110,12 +110,6 @@ end
 class DownloadStrategyDetector
   class << self
     module Compat
-      def detect(url, using = nil)
-        strategy = super
-        require_aws_sdk if strategy == S3DownloadStrategy
-        strategy
-      end
-
       def detect_from_symbol(symbol)
         case symbol
         when :github_private_repo
