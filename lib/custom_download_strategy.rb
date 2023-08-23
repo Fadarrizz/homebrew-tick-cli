@@ -1,8 +1,14 @@
 require "download_strategy"
 
+# This is based on the following, with minor fixes.
+# https://github.com/Homebrew/brew/blob/193af1442f6b9a19fa71325160d0ee2889a1b6c9/Library/Homebrew/compat/download_strategy.rb#L48-L157
+#
+# For added fixes, see:
+# https://gist.github.com/ZPascal/b21c652b811872b3f56db9d54d61d6c6
+#
 # GitHubPrivateRepositoryDownloadStrategy downloads contents from GitHub
 # Private Repository. To use it, add
-# `:using => :github_private_repo` to the URL section of
+# `:using => GitHubPrivateRepositoryDownloadStrategy` to the URL section of
 # your formula. This download strategy uses GitHub access tokens (in the
 # environment variables `HOMEBREW_GITHUB_API_TOKEN`) to sign the request.  This
 # strategy is suitable for corporate use just like S3DownloadStrategy, because
